@@ -8,6 +8,7 @@ export default function App() {
       <ExpoSattusBar backgroundColor="#0556" style="light" />
     </>
   );
+  //hange
 }
 
 // item: {
