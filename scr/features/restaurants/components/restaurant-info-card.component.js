@@ -1,11 +1,14 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text ,View} from "react-native";
 import { Card } from "react-native-paper";
-import styled from "styled-components";
+import styled from "styled-components/native"
 
-const Title=styled.text`padding: 16px`;
-
+const Title = styled.Text`
+  padding: 16px;
+  color: red;
+`;
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
+
   const {
     name = "Some Restaurant",
     icon,
@@ -19,34 +22,9 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
   } = restaurant;
   return (
     <Card>
-      <Card.Cover style={styles.img} source={{ uri: photos[0] }} />
-      <Card.Content>
-        <Title> {name} </Title>
-      </Card.Content>
+      <Card.Cover  source={{ uri: photos[0] }} />
+      <Title> {name} </Title>
     </Card>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  search: {
-    padding: 16,
-  },
-  list: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "blue",
-  },
-  img: {
-    padding: 30,
-  },
-});
-
-// item: {
-//   ,
-//   ,
-//   ,
-//   ,
-// },

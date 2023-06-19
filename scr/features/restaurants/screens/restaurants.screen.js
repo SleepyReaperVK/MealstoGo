@@ -9,9 +9,7 @@ export const RestaurantsScreen = () => (
     <View style={styles.search}>
       <Searchbar />
     </View>
-    <View style={styles.list}>
       <RestaurantInfoCard />
-    </View>
   </SafeAreaView>
 );
 
