@@ -1,6 +1,9 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 import { Card } from "react-native-paper";
+import styled from "styled-components";
+
+const Title=styled.text`padding: 16px`;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
@@ -18,7 +21,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     <Card>
       <Card.Cover style={styles.img} source={{ uri: photos[0] }} />
       <Card.Content>
-        <Text> {name} </Text>
+        <Title> {name} </Title>
       </Card.Content>
     </Card>
   );
